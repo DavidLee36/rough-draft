@@ -7,14 +7,12 @@
 
 [node name="PlayerCapsule" unique_id=481567829 instance=ExtResource("1_ttj48")]
 script = ExtResource("2_ee66v")
-mouse_sensitivity = 0.001
-base_speed = 6.5
-sprint_speed = 9.0
-jump_velocity = 6.0
-max_health = 10.0
+
+[node name="Capsule" parent="." index="0" unique_id=1742361748]
+cast_shadow = 3
 
 [node name="Camera3D" type="Camera3D" parent="." index="2" unique_id=628682000]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 1.5, 0.5)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 1.5, 0)
 fov = 45.0
 script = ExtResource("3_dd51n")
 

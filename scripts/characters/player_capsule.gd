@@ -18,6 +18,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		_mouse_delta += event.relative
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	if event.is_action_pressed("mouse_capture"):
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
 func _physics_process(delta: float) -> void:
@@ -57,7 +59,7 @@ func jetpack(delta: float) -> void:
 	if Input.is_action_pressed("jump"):
 		velocity.y = jump_velocity
 	else:
-		velocity.y -= gravity * delta
+		velocity.y -= GRAVITY * delta
 
 func shooting_logic() -> void:
 	if Input.is_action_just_pressed("shoot"):

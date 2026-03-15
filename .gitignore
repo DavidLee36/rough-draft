@@ -11,6 +11,9 @@
 *.dmg
 *.zip
 
+# Godot temp files
+*.tmp
+
 # OS junk
 .DS_Store
 Thumbs.db

@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://fcwhl803vx2i"]
 
-[ext_resource type="Script" uid="uid://bumtycohcmsdq" path="res://Scripts/characters/character_capsule.gd" id="1_iuvcg"]
 [ext_resource type="Texture2D" uid="uid://bljotp23yrckc" path="res://assets/capsules/Color_Palette_01.png" id="1_ysvgh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1j4kk"]
@@ -2682,7 +2681,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_735wn")
 
 [node name="CharacterCapsule" type="CharacterBody3D" unique_id=481567829]
-script = ExtResource("1_iuvcg")
 
 [node name="Capsule" type="MeshInstance3D" parent="." unique_id=1742361748]
 mesh = SubResource("ArrayMesh_duot5")
