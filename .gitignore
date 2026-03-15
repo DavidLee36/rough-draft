@@ -1,0 +1,17 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Auto-generated translation files
+*.translation
+
+# Export artifacts
+*.exe
+*.x86_64
+*.dmg
+*.zip
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini

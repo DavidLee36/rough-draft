@@ -1,0 +1,274 @@
+[gd_scene format=3 uid="uid://wc0oipnp0r7o"]
+
+[ext_resource type="PackedScene" uid="uid://fcwhl803vx2i" path="res://scenes/characters/character_capsule.tscn" id="1_ttj48"]
+[ext_resource type="Script" uid="uid://dohyjkwneh0bs" path="res://scripts/characters/player_capsule.gd" id="2_ee66v"]
+[ext_resource type="Script" uid="uid://dsuu1f74rodrg" path="res://scripts/camera.gd" id="3_dd51n"]
+[ext_resource type="PackedScene" uid="uid://dpcq8sxm34dcu" path="res://scenes/equipment/pistol.tscn" id="4_cao08"]
+
+[node name="PlayerCapsule" unique_id=481567829 instance=ExtResource("1_ttj48")]
+script = ExtResource("2_ee66v")
+mouse_sensitivity = 0.001
+base_speed = 6.5
+sprint_speed = 9.0
+jump_velocity = 6.0
+max_health = 10.0
+
+[node name="Camera3D" type="Camera3D" parent="." index="2" unique_id=628682000]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 1.5, 0.5)
+fov = 45.0
+script = ExtResource("3_dd51n")
+
+[node name="Pistol" parent="Camera3D" index="0" unique_id=1468997496 instance=ExtResource("4_cao08")]
+transform = Transform3D(0.099999875, -1.4072686e-10, 6.536993e-13, 1.407269e-10, 0.0999956, -0.0009319931, 6.554757e-13, 0.0009319922, 0.09999568, -1.1852215e-08, -0.22833431, -0.7144265)
+
+[node name="Eyes_Angry_02" parent="Customization/Eyes" parent_id_path=PackedInt32Array(1335460402) index="0" unique_id=1095507787]
+layers = 16
+cast_shadow = 3
+
+[node name="Eyes_Basic_Female_02" parent="Customization/Eyes" parent_id_path=PackedInt32Array(1335460402) index="1" unique_id=2015633715]
+layers = 16
+cast_shadow = 3
+
+[node name="Eyes_Basic_Male_02" parent="Customization/Eyes" parent_id_path=PackedInt32Array(1335460402) index="2" unique_id=1113103078]
+layers = 16
+cast_shadow = 3
+
+[node name="Eyes_Clossed_02" parent="Customization/Eyes" parent_id_path=PackedInt32Array(1335460402) index="3" unique_id=1948301651]
+layers = 16
+cast_shadow = 3
+
+[node name="Eyes_Crossed_02" parent="Customization/Eyes" parent_id_path=PackedInt32Array(1335460402) index="4" unique_id=1242389823]
+layers = 16
+cast_shadow = 3
+
+[node name="Eyes_One_Eyed_02" parent="Customization/Eyes" parent_id_path=PackedInt32Array(1335460402) index="5" unique_id=1265217760]
+layers = 16
+cast_shadow = 3
+
+[node name="Eyes_Thief_Eye_Mask_02" parent="Customization/Eyes" parent_id_path=PackedInt32Array(1335460402) index="6" unique_id=1812837311]
+layers = 16
+cast_shadow = 3
+
+[node name="Eyes_Woble_02" parent="Customization/Eyes" parent_id_path=PackedInt32Array(1335460402) index="7" unique_id=578322715]
+layers = 16
+cast_shadow = 3
+
+[node name="Body_Prop_Cape_02" parent="Customization/BodyProps" parent_id_path=PackedInt32Array(1557758162) index="0" unique_id=360089726]
+layers = 16
+cast_shadow = 3
+
+[node name="Body_Prop_Cape_King_02" parent="Customization/BodyProps" parent_id_path=PackedInt32Array(1557758162) index="1" unique_id=1201662232]
+layers = 16
+cast_shadow = 3
+
+[node name="Body_Prop_Neck_04" parent="Customization/BodyProps" parent_id_path=PackedInt32Array(1557758162) index="2" unique_id=912616359]
+layers = 16
+cast_shadow = 3
+
+[node name="Body_Prop_Neck_05" parent="Customization/BodyProps" parent_id_path=PackedInt32Array(1557758162) index="3" unique_id=271015612]
+layers = 16
+cast_shadow = 3
+
+[node name="Body_Prop_Neck_06" parent="Customization/BodyProps" parent_id_path=PackedInt32Array(1557758162) index="4" unique_id=1296422153]
+layers = 16
+cast_shadow = 3
+
+[node name="Body_Prop_Waist_03" parent="Customization/BodyProps" parent_id_path=PackedInt32Array(1557758162) index="5" unique_id=16441198]
+layers = 16
+cast_shadow = 3
+
+[node name="Body_Prop_Waist_04" parent="Customization/BodyProps" parent_id_path=PackedInt32Array(1557758162) index="6" unique_id=1672865740]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_18" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="0" unique_id=655960937]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_19" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="1" unique_id=261181686]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_20" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="2" unique_id=1240978423]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_21" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="3" unique_id=883981967]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_22" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="4" unique_id=1320718831]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_23" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="5" unique_id=34160968]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_24" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="6" unique_id=1666058827]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_25" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="7" unique_id=400607417]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_26" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="8" unique_id=36910570]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_27" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="9" unique_id=1132260651]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_28" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="10" unique_id=627731021]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_29" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="11" unique_id=1053464691]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_30" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="12" unique_id=422783812]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_31" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="13" unique_id=2062505679]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_32" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="14" unique_id=117533293]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_33" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="15" unique_id=808677972]
+layers = 16
+cast_shadow = 3
+
+[node name="Hair_34" parent="Customization/Hair" parent_id_path=PackedInt32Array(1679643979) index="16" unique_id=351055502]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_3D_Glass_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="0" unique_id=890962796]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Arrow_04" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="1" unique_id=308953072]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Arrow_05" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="2" unique_id=212168940]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Arrow_06" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="3" unique_id=2060945095]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Cap_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="4" unique_id=1610074060]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Cap_01A2" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="5" unique_id=1630405179]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Crown_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="6" unique_id=1153309775]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Hat_Cowboy_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="7" unique_id=484032488]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Hat_Cowboy_01A2" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="8" unique_id=1405117979]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Hat_Farmer_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="9" unique_id=1813294039]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Hat_Worker_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="10" unique_id=1978871275]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_headband_Ninja_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="11" unique_id=533699360]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Headphone_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="12" unique_id=1727527388]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Helmet_Knight_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="13" unique_id=2086978027]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Helmet_Medieval_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="14" unique_id=1431475940]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Helmet_Viking_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="15" unique_id=913431999]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Police_Cap_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="16" unique_id=1761220264]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Robber_Beanie_03" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="17" unique_id=1458885160]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Robber_Beanie_04" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="18" unique_id=309223976]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Sunglass_03" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="19" unique_id=878461898]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_Sunglass_04" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="20" unique_id=742962058]
+layers = 16
+cast_shadow = 3
+
+[node name="Head_Prop_VR_02" parent="Customization/HeadProps" parent_id_path=PackedInt32Array(1525473895) index="21" unique_id=957886463]
+layers = 16
+cast_shadow = 3
+
+[node name="Mouth_Laugh_02" parent="Customization/Mouths" parent_id_path=PackedInt32Array(1843518369) index="0" unique_id=1968256272]
+layers = 16
+cast_shadow = 3
+
+[node name="Mouth_Lipstick_02" parent="Customization/Mouths" parent_id_path=PackedInt32Array(1843518369) index="1" unique_id=1208409315]
+layers = 16
+cast_shadow = 3
+
+[node name="Mouth_Meh_02" parent="Customization/Mouths" parent_id_path=PackedInt32Array(1843518369) index="2" unique_id=966638981]
+layers = 16
+cast_shadow = 3
+
+[node name="Mouth_Mustache_04" parent="Customization/Mouths" parent_id_path=PackedInt32Array(1843518369) index="3" unique_id=614641294]
+layers = 16
+cast_shadow = 3
+
+[node name="Mouth_Mustache_05" parent="Customization/Mouths" parent_id_path=PackedInt32Array(1843518369) index="4" unique_id=92073275]
+layers = 16
+cast_shadow = 3
+
+[node name="Mouth_Mustache_06" parent="Customization/Mouths" parent_id_path=PackedInt32Array(1843518369) index="5" unique_id=67127905]
+layers = 16
+cast_shadow = 3
+
+[node name="Mouth_Neutral_02" parent="Customization/Mouths" parent_id_path=PackedInt32Array(1843518369) index="6" unique_id=1546671703]
+layers = 16
+cast_shadow = 3
+
+[node name="Mouth_Sad_02" parent="Customization/Mouths" parent_id_path=PackedInt32Array(1843518369) index="7" unique_id=525396605]
+layers = 16
+cast_shadow = 3
+
+[node name="Mouth_Smile_02" parent="Customization/Mouths" parent_id_path=PackedInt32Array(1843518369) index="8" unique_id=181586250]
+layers = 16
+cast_shadow = 3

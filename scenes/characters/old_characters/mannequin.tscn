@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://c3f1ulqh8x7vm"]
+
+[ext_resource type="PackedScene" uid="uid://dban7ttt6w886" path="res://assets/Characters/Mannequin_Medium.glb" id="1_ea0la"]
+[ext_resource type="Animation" uid="uid://dm7ptasqwocpp" path="res://assets/Animations/Jump_Full_Long.res" id="2_pahlc"]
+[ext_resource type="Animation" uid="uid://cowpbeja3ywt8" path="res://assets/Animations/Crawling.res" id="2_qng5p"]
+[ext_resource type="Animation" uid="uid://sn3emikq5ica" path="res://assets/Animations/Crouching.res" id="3_4xgy0"]
+[ext_resource type="Animation" uid="uid://byj6ch61cbl4e" path="res://assets/Animations/Jump_Full_Short.res" id="3_xc7nw"]
+[ext_resource type="Animation" uid="uid://bo7uqo2gi216d" path="res://assets/Animations/Jump_Idle.res" id="4_h0a32"]
+[ext_resource type="Animation" uid="uid://c5g0no00t6f2j" path="res://assets/Animations/Death_A.res" id="4_x2rng"]
+[ext_resource type="Animation" uid="uid://b3k2rlovlavw4" path="res://assets/Animations/Death_A_Pose.res" id="5_d45fd"]
+[ext_resource type="Animation" uid="uid://dol53hckuh8ff" path="res://assets/Animations/Jump_Land.res" id="5_hynk8"]
+[ext_resource type="Animation" uid="uid://bovo52s3cjgkw" path="res://assets/Animations/Death_B.res" id="6_ew4e6"]
+[ext_resource type="Animation" uid="uid://lqsjqdru3vai" path="res://assets/Animations/Jump_Start.res" id="6_wv4vr"]
+[ext_resource type="Animation" uid="uid://bj50lix427h4v" path="res://assets/Animations/Ranged_1H_Aiming.res" id="7_f3jty"]
+[ext_resource type="Animation" uid="uid://c21leymd076lq" path="res://assets/Animations/Death_B_Pose.res" id="7_lfb5e"]
+[ext_resource type="Animation" uid="uid://4qqlbdj7fm2h" path="res://assets/Animations/Dodge_Backward.res" id="8_f04d2"]
+[ext_resource type="Animation" uid="uid://b7ihd2js371ei" path="res://assets/Animations/Ranged_1H_Reload.res" id="8_nb4c1"]
+[ext_resource type="Animation" uid="uid://dvnlv2vv4fvti" path="res://assets/Animations/Ranged_1H_Shoot.res" id="9_doukk"]
+[ext_resource type="Animation" uid="uid://ck46sdck84ji8" path="res://assets/Animations/Dodge_Forward.res" id="9_xopxe"]
+[ext_resource type="Animation" uid="uid://csicujh1i76d2" path="res://assets/Animations/Ranged_1H_Shooting.res" id="10_624r0"]
+[ext_resource type="Animation" uid="uid://h1f7dvonj3td" path="res://assets/Animations/Dodge_Left.res" id="10_iej6g"]
+[ext_resource type="Animation" uid="uid://cqjk1es8122l6" path="res://assets/Animations/Dodge_Right.res" id="11_2wttf"]
+[ext_resource type="Animation" uid="uid://cru62entg0hpa" path="res://assets/Animations/Ranged_2H_Aiming.res" id="11_7w3t4"]
+[ext_resource type="Animation" uid="uid://cjnft7pgge6j4" path="res://assets/Animations/Hit_A.res" id="12_12d3v"]
+[ext_resource type="Animation" uid="uid://bucaeoe1buw0u" path="res://assets/Animations/Ranged_2H_Reload.res" id="12_vh6l4"]
+[ext_resource type="Animation" uid="uid://bwpdg4bf54vtu" path="res://assets/Animations/Hit_B.res" id="13_nxqrq"]
+[ext_resource type="Animation" uid="uid://4v7j44los0rf" path="res://assets/Animations/Ranged_2H_Shoot.res" id="13_w4sex"]
+[ext_resource type="Animation" uid="uid://dvdsthubjulcd" path="res://assets/Animations/Ranged_2H_Shooting.res" id="14_x1p3j"]
+[ext_resource type="Animation" uid="uid://dtia470ndipkn" path="res://assets/Animations/Idle_A.res" id="14_yaxgd"]
+[ext_resource type="Animation" uid="uid://dg88ejhfo36qp" path="res://assets/Animations/Ranged_Bow_Aiming_Idle.res" id="15_3t8lk"]
+[ext_resource type="Animation" uid="uid://c103d33rqqq1f" path="res://assets/Animations/Idle_B.res" id="15_iawfn"]
+[ext_resource type="Animation" uid="uid://du0eepvq75asa" path="res://assets/Animations/Interact.res" id="16_1721e"]
+[ext_resource type="Animation" uid="uid://cxeg27oqrppci" path="res://assets/Animations/Ranged_Bow_Draw.res" id="16_e3q1f"]
+[ext_resource type="Animation" uid="uid://ck6wa5vscd4x2" path="res://assets/Animations/Ranged_Bow_Draw_Up.res" id="17_ikeum"]
+[ext_resource type="Animation" uid="uid://ctcumbcpmglor" path="res://assets/Animations/Ranged_Bow_Idle.res" id="18_1cpff"]
+[ext_resource type="Animation" uid="uid://h61gxiofu4hl" path="res://assets/Animations/Ranged_Bow_Release.res" id="19_g5j2d"]
+[ext_resource type="Animation" uid="uid://8vm2pmotwq6f" path="res://assets/Animations/Ranged_Bow_Release_Up.res" id="20_ap016"]
+[ext_resource type="Animation" uid="uid://64j64w682l86" path="res://assets/Animations/Ranged_Magic_Raise.res" id="21_f2p2x"]
+[ext_resource type="Animation" uid="uid://cep26u7atwk14" path="res://assets/Animations/Ranged_Magic_Shoot.res" id="22_pr1sf"]
+[ext_resource type="Animation" uid="uid://cwsmgquljwc06" path="res://assets/Animations/PickUp.res" id="22_w55ma"]
+[ext_resource type="Animation" uid="uid://dlq4wddn3quwp" path="res://assets/Animations/Ranged_Magic_Spellcasting.res" id="23_f1i2b"]
+[ext_resource type="Animation" uid="uid://8vn54i7v4afy" path="res://assets/Animations/Ranged_Magic_Spellcasting_Long.res" id="24_myhr2"]
+[ext_resource type="Animation" uid="uid://b88mdbb2r3fg6" path="res://assets/Animations/Ranged_Magic_Summon.res" id="25_tyv73"]
+[ext_resource type="Animation" uid="uid://b1cgbe32b7w5m" path="res://assets/Animations/Running_A.res" id="26_7wysp"]
+[ext_resource type="Animation" uid="uid://75dswekm01en" path="res://assets/Animations/Running_B.res" id="27_2kvl6"]
+[ext_resource type="Animation" uid="uid://dai5qg63lkcqx" path="res://assets/Animations/T-Pose.res" id="28_qng5p"]
+[ext_resource type="Animation" uid="uid://1pc8ikcwfrsp" path="res://assets/Animations/Walking_A.res" id="29_4xgy0"]
+[ext_resource type="Animation" uid="uid://d1okk1qi5smj6" path="res://assets/Animations/Walking_B.res" id="30_x2rng"]
+[ext_resource type="Animation" uid="uid://cvwbeb14byql5" path="res://assets/Animations/Walking_C.res" id="31_d45fd"]
+[ext_resource type="Animation" uid="uid://c37fsvvs0g4j0" path="res://assets/Animations/Running_HoldingBow.res" id="44_p6ssq"]
+[ext_resource type="Animation" uid="uid://dw0a6awnmjyge" path="res://assets/Animations/Running_HoldingRifle.res" id="45_ryy05"]
+[ext_resource type="Animation" uid="uid://bha85djjcc3tx" path="res://assets/Animations/Running_Strafe_Left.res" id="46_jc2wx"]
+[ext_resource type="Animation" uid="uid://baj2b1ii41c27" path="res://assets/Animations/Running_Strafe_Right.res" id="47_b2ohk"]
+[ext_resource type="Animation" uid="uid://crvt151dno64q" path="res://assets/Animations/Sneaking.res" id="48_0xy3c"]
+[ext_resource type="Animation" uid="uid://cmv8ouxw5onlc" path="res://assets/Animations/Spawn_Air.res" id="49_lqnfe"]
+[ext_resource type="Animation" uid="uid://d1aprygyultpx" path="res://assets/Animations/Spawn_Ground.res" id="50_7g7qd"]
+[ext_resource type="Animation" uid="uid://nn72xj3b5wji" path="res://assets/Animations/Throw.res" id="52_mlh7e"]
+[ext_resource type="Animation" uid="uid://b2tvek87i45e5" path="res://assets/Animations/Use_Item.res" id="53_sysyj"]
+[ext_resource type="Animation" uid="uid://cnr4llbo4y8og" path="res://assets/Animations/Walking_Backwards.res" id="56_nunll"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ew4e6"]
+_data = {
+&"Crawling": ExtResource("2_qng5p"),
+&"Crouching": ExtResource("3_4xgy0"),
+&"Death_A": ExtResource("4_x2rng"),
+&"Death_A_Pose": ExtResource("5_d45fd"),
+&"Death_B": ExtResource("6_ew4e6"),
+&"Death_B_Pose": ExtResource("7_lfb5e"),
+&"Dodge_Backward": ExtResource("8_f04d2"),
+&"Dodge_Forward": ExtResource("9_xopxe"),
+&"Dodge_Left": ExtResource("10_iej6g"),
+&"Dodge_Right": ExtResource("11_2wttf"),
+&"Hit_A": ExtResource("12_12d3v"),
+&"Hit_B": ExtResource("13_nxqrq"),
+&"Idle_A": ExtResource("14_yaxgd"),
+&"Idle_B": ExtResource("15_iawfn"),
+&"Interact": ExtResource("16_1721e"),
+&"Jump_Full_Long": ExtResource("2_pahlc"),
+&"Jump_Full_Short": ExtResource("3_xc7nw"),
+&"Jump_Idle": ExtResource("4_h0a32"),
+&"Jump_Land": ExtResource("5_hynk8"),
+&"Jump_Start": ExtResource("6_wv4vr"),
+&"PickUp": ExtResource("22_w55ma"),
+&"Ranged_1H_Aiming": ExtResource("7_f3jty"),
+&"Ranged_1H_Reload": ExtResource("8_nb4c1"),
+&"Ranged_1H_Shoot": ExtResource("9_doukk"),
+&"Ranged_1H_Shooting": ExtResource("10_624r0"),
+&"Ranged_2H_Aiming": ExtResource("11_7w3t4"),
+&"Ranged_2H_Reload": ExtResource("12_vh6l4"),
+&"Ranged_2H_Shoot": ExtResource("13_w4sex"),
+&"Ranged_2H_Shooting": ExtResource("14_x1p3j"),
+&"Ranged_Bow_Aiming_Idle": ExtResource("15_3t8lk"),
+&"Ranged_Bow_Draw": ExtResource("16_e3q1f"),
+&"Ranged_Bow_Draw_Up": ExtResource("17_ikeum"),
+&"Ranged_Bow_Idle": ExtResource("18_1cpff"),
+&"Ranged_Bow_Release": ExtResource("19_g5j2d"),
+&"Ranged_Bow_Release_Up": ExtResource("20_ap016"),
+&"Ranged_Magic_Raise": ExtResource("21_f2p2x"),
+&"Ranged_Magic_Shoot": ExtResource("22_pr1sf"),
+&"Ranged_Magic_Spellcasting": ExtResource("23_f1i2b"),
+&"Ranged_Magic_Spellcasting_Long": ExtResource("24_myhr2"),
+&"Ranged_Magic_Summon": ExtResource("25_tyv73"),
+&"Running_A": ExtResource("26_7wysp"),
+&"Running_B": ExtResource("27_2kvl6"),
+&"Running_HoldingBow": ExtResource("44_p6ssq"),
+&"Running_HoldingRifle": ExtResource("45_ryy05"),
+&"Running_Strafe_Left": ExtResource("46_jc2wx"),
+&"Running_Strafe_Right": ExtResource("47_b2ohk"),
+&"Sneaking": ExtResource("48_0xy3c"),
+&"Spawn_Air": ExtResource("49_lqnfe"),
+&"Spawn_Ground": ExtResource("50_7g7qd"),
+&"T-Pose": ExtResource("28_qng5p"),
+&"Throw": ExtResource("52_mlh7e"),
+&"Use_Item": ExtResource("53_sysyj"),
+&"Walking_A": ExtResource("29_4xgy0"),
+&"Walking_B": ExtResource("30_x2rng"),
+&"Walking_Backwards": ExtResource("56_nunll"),
+&"Walking_C": ExtResource("31_d45fd")
+}
+
+[node name="Mannequin_Medium" unique_id=95951399 instance=ExtResource("1_ea0la")]
+
+[node name="Skeleton3D" parent="Rig_Medium" parent_id_path=PackedInt32Array(2070415905) index="0" unique_id=1820965501]
+bones/1/position = Vector3(0, 0.39206383, 0)
+bones/1/rotation = Quaternion(-1.11122625e-10, 0.043157753, 2.5724098e-09, 0.9990683)
+bones/1/scale = Vector3(0.99999994, 1, 0.99999994)
+bones/2/position = Vector3(0.17094508, 0.1135872, 1.5994095e-08)
+bones/2/rotation = Quaternion(0.99371517, 0.08371457, 0.07350378, 0.0109185325)
+bones/2/scale = Vector3(0.99999994, 0.9999997, 1.0000008)
+bones/3/rotation = Quaternion(0.19560215, 6.2622235e-08, -1.3223872e-07, 0.9806833)
+bones/3/scale = Vector3(1.0000004, 0.9999999, 0.99999994)
+bones/4/rotation = Quaternion(-0.517564, -0.2094967, 0.043654874, 0.82845217)
+bones/4/scale = Vector3(0.99999964, 1.0000006, 0.99999946)
+bones/5/rotation = Quaternion(0.00011178441, 0.92025787, -0.39131266, -2.5241658e-05)
+bones/5/scale = Vector3(0.99999994, 0.99999774, 1.0000024)
+bones/6/rotation = Quaternion(-6.938893e-18, 7.1054274e-15, 4.93038e-32, 1)
+bones/6/scale = Vector3(1.0000001, 1, 1.0000001)
+bones/7/rotation = Quaternion(0.046398327, 1.1071469e-08, 0.004016135, 0.99891496)
+bones/7/scale = Vector3(1, 0.9999999, 1)
+bones/8/position = Vector3(-0.21200736, 0.13413227, 8.487841e-08)
+bones/8/rotation = Quaternion(-0.62623674, 0.12887873, 0.6789402, 0.36091295)
+bones/8/scale = Vector3(0.99999887, 0.99999875, 0.99999964)
+bones/9/rotation = Quaternion(3.3321733e-08, 4.6329838e-08, 0.30524194, 0.9522749)
+bones/9/scale = Vector3(1.0000005, 0.9999998, 1.0000002)
+bones/10/rotation = Quaternion(-3.002606e-08, -9.604189e-09, -0.026658088, 0.99964464)
+bones/10/scale = Vector3(1.0000001, 1.0000001, 1)
+bones/11/rotation = Quaternion(-0.1660994, 0.2390854, -0.07152497, 0.9540091)
+bones/11/scale = Vector3(0.99999964, 1, 1.0000005)
+bones/12/rotation = Quaternion(0.067226626, -0.04391859, 0.04702597, 0.9956607)
+bones/12/scale = Vector3(1.0000001, 1, 0.99999994)
+bones/13/position = Vector3(0.21200736, 0.13413227, 8.487841e-08)
+bones/13/rotation = Quaternion(-0.55467385, -0.19844319, -0.73473555, 0.33633482)
+bones/13/scale = Vector3(0.9999991, 0.99999905, 0.99999964)
+bones/14/rotation = Quaternion(4.7995222e-08, -5.210764e-08, -0.2991361, 0.9542105)
+bones/14/scale = Vector3(1.0000004, 0.9999999, 1)
+bones/15/rotation = Quaternion(2.6357031e-11, 6.232488e-10, 0.026658094, 0.99964464)
+bones/15/scale = Vector3(1.0000001, 1, 1)
+bones/16/rotation = Quaternion(-0.22725627, -0.25134227, -0.14045878, 0.93029726)
+bones/16/scale = Vector3(0.99999994, 0.9999999, 1.0000002)
+bones/17/position = Vector3(-0.17094508, 0.11358732, 1.557549e-08)
+bones/17/rotation = Quaternion(0.9973222, -0.029457364, 0.03152927, 0.05904832)
+bones/17/scale = Vector3(0.9999999, 0.99999976, 1.0000008)
+bones/18/rotation = Quaternion(0.2740081, -6.3812955e-08, 1.927607e-07, 0.9617275)
+bones/18/scale = Vector3(0.99999994, 0.99999976, 0.99999994)
+bones/19/rotation = Quaternion(-0.5590394, 0.11451276, -0.008627633, 0.82115)
+bones/19/scale = Vector3(0.99999976, 1.0000006, 0.9999992)
+bones/20/rotation = Quaternion(-8.9348905e-05, 0.9202216, -0.39139763, 2.0290994e-05)
+bones/20/scale = Vector3(1.0000002, 0.9999979, 1.0000024)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=521898216]
+libraries/Character = SubResource("AnimationLibrary_ew4e6")

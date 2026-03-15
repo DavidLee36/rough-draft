@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://dpcq8sxm34dcu"]
+
+[ext_resource type="PackedScene" uid="uid://bu8bnki7esv6a" path="res://assets/guns/low-poly_g17.glb" id="1_6aslv"]
+[ext_resource type="Script" uid="uid://bm7y4uia5nhcu" path="res://scripts/equipment/pistol.gd" id="2_tm5ee"]
+
+[sub_resource type="Animation" id="Animation_1e3ry"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../FrontSight")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.011012703, 1.9223701, -3.61315)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../RearLeftSight")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.18839657, 1.9223701, 2.8776884)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../RearRightSight")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.181, 1.922, 2.878)
+
+[sub_resource type="Animation" id="Animation_buff3"]
+resource_name = "SlideBack"
+length = 0.14
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton3D:slide_Armature")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 3.27859, -0.23702, 0.06, 1, -1.36711e-08, 2.70709, -1.83874, 0.14, 1, 0, 3.27859, -0.23702)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton3D:Armature_rootJoint")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1, 0.06, 1, -1.22827e-17, -0.0553162, -3.0808e-24, 0.998469, 0.14, 1, 0, 0, 0, 1)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton3D:Armature_rootJoint")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.06, 1, 0, 0, -2, 0.14, 1, 0, 0, 0)
+tracks/3/type = "position_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../FrontSight")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 1.922, -3.613, 0.06, 1, 0.011012703, 2.390671, 0.23184687, 0.14, 1, 0, 1.922, -3.613)
+tracks/4/type = "position_3d"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../../RearLeftSight")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.18839657, 1.9223701, 2.8776884, 0.06, 1, -0.18839657, 1.6471107, 6.607129, 0.14, 1, -0.18839657, 1.9223701, 2.8776884)
+tracks/5/type = "position_3d"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../../RearRightSight")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.181, 1.922, 2.878, 0.06, 1, 0.181, 1.647, 6.607, 0.14, 1, 0.181, 1.922, 2.878)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t6oaa"]
+_data = {
+&"RESET": SubResource("Animation_1e3ry"),
+&"SlideBack": SubResource("Animation_buff3")
+}
+
+[node name="Pistol" unique_id=1468997496 instance=ExtResource("1_6aslv")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+script = ExtResource("2_tm5ee")
+
+[node name="Sketchfab_model" parent="." index="0" unique_id=1676748561]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sketchfab_model/Root/Armature" parent_id_path=PackedInt32Array(819778426) index="2" unique_id=1181286359]
+libraries/ = SubResource("AnimationLibrary_t6oaa")
+
+[node name="RayCast3D" type="RayCast3D" parent="." index="1" unique_id=292818603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.263, -4.2791142)
+target_position = Vector3(0, 0, -1)
+
+[node name="FrontSight" type="OmniLight3D" parent="." index="2" unique_id=1202670495]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.011012703, 1.9223701, -3.61315)
+light_color = Color(0, 1, 0, 1)
+omni_range = 0.1
+omni_attenuation = 0.05
+
+[node name="RearLeftSight" type="OmniLight3D" parent="." index="3" unique_id=1884267527]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -0.18839657, 1.9223701, 2.8776884)
+light_color = Color(0, 1, 0, 1)
+omni_range = 0.1
+omni_attenuation = 0.05
+
+[node name="RearRightSight" type="OmniLight3D" parent="." index="4" unique_id=1960378035]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.181, 1.922, 2.878)
+light_color = Color(0, 1, 0, 1)
+omni_range = 0.1
+omni_attenuation = 0.05
