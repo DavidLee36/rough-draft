@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://wc0oipnp0r7o"]
 
 [ext_resource type="PackedScene" uid="uid://fcwhl803vx2i" path="res://scenes/characters/character_capsule.tscn" id="1_ttj48"]
-[ext_resource type="Script" uid="uid://dohyjkwneh0bs" path="res://scripts/characters/player_capsule.gd" id="2_ee66v"]
-[ext_resource type="Script" uid="uid://dsuu1f74rodrg" path="res://scripts/camera.gd" id="3_dd51n"]
+[ext_resource type="Script" uid="uid://bshluta2gdne5" path="res://scripts/characters/player_capsule.gd" id="2_ee66v"]
+[ext_resource type="Script" uid="uid://dsuu1f74rodrg" path="res://scripts/characters/player/camera.gd" id="3_dd51n"]
 [ext_resource type="PackedScene" uid="uid://dpcq8sxm34dcu" path="res://scenes/equipment/pistol.tscn" id="4_cao08"]
 
 [node name="PlayerCapsule" unique_id=481567829 instance=ExtResource("1_ttj48")]

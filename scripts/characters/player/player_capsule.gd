@@ -21,14 +21,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("mouse_capture"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
+
 func _physics_process(delta: float) -> void:
 	movement_logic(delta)
 	aiming_logic()
 	shooting_logic()
 	if Input.is_action_pressed("bullet_time"):
-		GameState.bullet_time = true
+		Engine.time_scale = 0.25
 	else:
-		GameState.bullet_time = false
+		Engine.time_scale = 1.0
 
 func movement_logic(delta: float) -> void:
 	panning_logic()
@@ -42,7 +43,7 @@ func movement_logic(delta: float) -> void:
 
 # Handle camera mouse look
 func panning_logic() -> void:
-	var slow_sens = 1.0 if !GameState.bullet_time else 3.0 # Slow down sens when in slow mo
+	var slow_sens = 1.0 if Engine.time_scale == 1.0 else 3.0 # Slow down sens when in slow mo
 	rotate_y(-_mouse_delta.x * (mouse_sensitivity / slow_sens))
 	camera.rotation.x -= _mouse_delta.y * (mouse_sensitivity / slow_sens)
 	camera.rotation.x = clamp(camera.rotation.x, -PI / 2, PI / 2)

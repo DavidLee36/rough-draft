@@ -15,6 +15,10 @@ run/main_scene="uid://cyeeupongfp2g"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameState="*uid://dcx0bufx4vmqs"
+
 [global_group]
 
 player=""
