@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bu8bnki7esv6a" path="res://assets/guns/low-poly_g17.glb" id="1_6aslv"]
 [ext_resource type="Script" uid="uid://bm7y4uia5nhcu" path="res://scripts/equipment/pistol.gd" id="2_tm5ee"]
+[ext_resource type="AudioStream" uid="uid://bemng6gy6jbdx" path="res://assets/sounds/647594__oneshotofficial__9mm-pistol-rapid-fire-10-shots.wav" id="3_tm5ee"]
 
 [sub_resource type="Animation" id="Animation_1e3ry"]
 length = 0.001
@@ -110,3 +111,7 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.181, 1.922, 2.878)
 light_color = Color(0, 1, 0, 1)
 omni_range = 0.1
 omni_attenuation = 0.05
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="5" unique_id=101903611]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+stream = ExtResource("3_tm5ee")

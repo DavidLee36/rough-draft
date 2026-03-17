@@ -5,10 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://c12rgicks8vt4" path="res://addons/proto-csgs/textures/dark/texture_08.png" id="5_68ib6"]
 [ext_resource type="PackedScene" uid="uid://vy48kj58lixm" path="res://scenes/characters/enemy_capsule.tscn" id="5_76cw8"]
 [ext_resource type="Texture2D" uid="uid://cxlqbjshgfnma" path="res://addons/proto-csgs/textures/light/texture_08.png" id="5_m00rq"]
+[ext_resource type="PackedScene" uid="uid://hcs1k41pp446" path="res://addons/proto-csgs/proto_csg_polygon_3d.tscn" id="6_76cw8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5jgm0"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+sky_top_color = Color(0.12, 0.28, 0.72, 1)
+sky_horizon_color = Color(0.62, 0.78, 0.98, 1)
+sky_curve = 0.09
+ground_bottom_color = Color(0.22, 0.45, 0.82, 1)
+ground_horizon_color = Color(0.62, 0.78, 0.98, 1)
+ground_curve = 0.05
 
 [sub_resource type="Sky" id="Sky_36ke7"]
 sky_material = SubResource("ProceduralSkyMaterial_5jgm0")
@@ -16,43 +21,59 @@ sky_material = SubResource("ProceduralSkyMaterial_5jgm0")
 [sub_resource type="Environment" id="Environment_riv1q"]
 background_mode = 2
 sky = SubResource("Sky_36ke7")
+ambient_light_source = 3
+ambient_light_energy = 1.2
 tonemap_mode = 2
+tonemap_exposure = 1.1
 glow_enabled = true
+glow_intensity = 0.6
+glow_bloom = 0.08
+fog_aerial_perspective = 0.25
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68ib6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76cw8"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("5_68ib6")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m00rq"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("5_68ib6")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+grow = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_brv20"]
 resource_local_to_scene = true
 albedo_texture = ExtResource("5_68ib6")
 uv1_offset = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76cw8"]
-resource_local_to_scene = true
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.13725491, 0.22745098, 0.03137255, 1)
-albedo_texture = ExtResource("5_m00rq")
-uv1_offset = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m00rq"]
-resource_local_to_scene = true
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.13725491, 0.22745098, 0.03137255, 1)
-albedo_texture = ExtResource("5_m00rq")
-uv1_offset = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_brv20"]
-resource_local_to_scene = true
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.13725491, 0.22745098, 0.03137255, 1)
-albedo_texture = ExtResource("5_m00rq")
-uv1_offset = Vector3(0.5, 0.5, 0.5)
-uv1_triplanar = true
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7d7pp"]
 resource_local_to_scene = true
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.13725491, 0.22745098, 0.03137255, 1)
+albedo_color = Color(2.2862106e-07, 0.47285253, 6.738305e-07, 1)
+albedo_texture = ExtResource("5_m00rq")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5nfq"]
+resource_local_to_scene = true
+albedo_color = Color(0.10779586, 0.34480074, 1, 1)
+albedo_texture = ExtResource("5_m00rq")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lha2r"]
+resource_local_to_scene = true
+albedo_color = Color(0.10779586, 0.34480074, 1, 1)
+albedo_texture = ExtResource("5_m00rq")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6owa4"]
+resource_local_to_scene = true
+albedo_color = Color(2.2862106e-07, 0.47285253, 6.738305e-07, 1)
 albedo_texture = ExtResource("5_m00rq")
 uv1_offset = Vector3(0.5, 0.5, 0.5)
 uv1_triplanar = true
@@ -67,46 +88,63 @@ environment = SubResource("Environment_riv1q")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=1579534077]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 9.772501, 0)
 layers = 3
+light_color = Color(0.9999986, 0.99584526, 0.71769387, 1)
+light_energy = 1.4
 shadow_enabled = true
+shadow_blur = 5.0
 
 [node name="Map" type="Node3D" parent="Environment" unique_id=2001549533]
 
+[node name="ProtoCSGBox3D6" parent="Environment/Map" unique_id=1863071489 instance=ExtResource("4_68ib6")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -32, 1, -14)
+size = Vector3(2, 2, 32)
+material = SubResource("StandardMaterial3D_76cw8")
+block_style = 7
+
+[node name="ProtoCSGBox3D5" parent="Environment/Map" unique_id=1303258028 instance=ExtResource("4_68ib6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15, 1, -29)
+size = Vector3(2, 2, 32)
+material = SubResource("StandardMaterial3D_m00rq")
+block_style = 7
+
 [node name="Ground" parent="Environment/Map" unique_id=1596527585 instance=ExtResource("4_68ib6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-size = Vector3(50, 1, 50)
-material = SubResource("StandardMaterial3D_68ib6")
+size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_brv20")
 block_style = 7
 
 [node name="PlayerCapsule" parent="." unique_id=481567829 instance=ExtResource("3_x4si1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 34, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 3, -24)
 
 [node name="CharacterCapsule" parent="." unique_id=76602923 instance=ExtResource("5_76cw8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 5)
 
-[node name="ProtoCSGBox3D3" parent="." unique_id=567946638 instance=ExtResource("4_68ib6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 3, 2)
-size = Vector3(4, 2, 4)
-material = SubResource("StandardMaterial3D_76cw8")
-block_color = 2
-block_style = 7
-
-[node name="ProtoCSGBox3D4" parent="." unique_id=1749608700 instance=ExtResource("4_68ib6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 32, 4)
-size = Vector3(4, 2, 4)
-material = SubResource("StandardMaterial3D_m00rq")
-block_color = 2
-block_style = 7
-
-[node name="ProtoCSGBox3D2" parent="." unique_id=1855268776 instance=ExtResource("4_68ib6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, 2)
-size = Vector3(4, 2, 4)
-material = SubResource("StandardMaterial3D_brv20")
-block_color = 2
-block_style = 7
-
-[node name="ProtoCSGBox3D" parent="." unique_id=1774713766 instance=ExtResource("4_68ib6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 2)
-size = Vector3(4, 2, 4)
+[node name="ProtoCSGBox3D" parent="." unique_id=1707224776 instance=ExtResource("4_68ib6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.5, -13)
+size = Vector3(8, 1, 8)
 material = SubResource("StandardMaterial3D_7d7pp")
+block_color = 2
+block_style = 7
+
+[node name="ProtoCSGPolygon3D" parent="." unique_id=2094885403 instance=ExtResource("6_76cw8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -16, 0, -18)
+polygon = PackedVector2Array(-4, 0, 1, 1, 1, 1, 1, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_e5nfq")
+block_color = 2
+block_style = 7
+
+[node name="ProtoCSGPolygon3D2" parent="." unique_id=1315780188 instance=ExtResource("6_76cw8")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -14, 0, -8)
+polygon = PackedVector2Array(-4, 0, 1, 1, 1, 1, 1, 0)
+depth = 2.0
+material = SubResource("StandardMaterial3D_lha2r")
+block_color = 2
+block_style = 7
+
+[node name="ProtoCSGBox3D2" parent="." unique_id=246663228 instance=ExtResource("4_68ib6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3, -13)
+size = Vector3(8, 6, 8)
+material = SubResource("StandardMaterial3D_6owa4")
 block_color = 2
 block_style = 7
