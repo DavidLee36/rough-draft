@@ -26,6 +26,7 @@ func direction_movement_logic(delta: float, direction: Vector3) -> void:
 		velocity.x = lerp(velocity.x, direction.x * base_speed, delta * 2.0)
 		velocity.z = lerp(velocity.z, direction.z * base_speed, delta * 2.0)
 	
+func fall(delta: float):
 	if not is_on_floor():
 		velocity.y -= GRAVITY * delta
 

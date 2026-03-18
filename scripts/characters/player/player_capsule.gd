@@ -1,8 +1,11 @@
 extends CharacterCapsule
 
 @export var mouse_sensitivity := 0.001
+@export var jetpack_velocity: float = 10
+@export var jetpack_velocity_cap: float = 10
 
 @onready var camera: Camera3D = $Camera3D
+@onready var restrict_jetpack_timer: Timer = $RestrictJetpackTimer
 
 var _mouse_delta := Vector2.ZERO
 
@@ -38,7 +41,7 @@ func movement_logic(delta: float) -> void:
 	var direction := (transform.basis * Vector3(-input_dir.x, 0, -input_dir.y)).normalized()
 	direction_movement_logic(delta, direction)
 	
-	jump_logic()
+	jump_jetpack_logic(delta)
 	move_and_slide()
 
 # Handle camera mouse look
@@ -49,17 +52,17 @@ func panning_logic() -> void:
 	camera.rotation.x = clamp(camera.rotation.x, -PI / 2, PI / 2)
 	_mouse_delta = Vector2.ZERO
 
-# Handle jumping and gravity
-func jump_logic() -> void:
-	if is_on_floor() and Input.is_action_just_pressed("jump"):
+# Handle vertical movement logic (jumping, falling, jetpack)
+func jump_jetpack_logic(delta) -> void:
+	print(velocity.y)
+	if is_on_floor() and Input.is_action_just_pressed("jump"): # user jumped
 		velocity.y = jump_velocity
-
-
-func jetpack(delta: float) -> void:
-	if Input.is_action_pressed("jump"):
-		velocity.y = jump_velocity
-	else:
-		velocity.y -= GRAVITY * delta
+		restrict_jetpack_timer.start()
+	if Input.is_action_pressed("jump") and restrict_jetpack_timer.is_stopped(): # jetpack
+		velocity.y += jetpack_velocity * delta
+		velocity.y = clampf(velocity.y, -INF, jetpack_velocity_cap)
+		return
+	fall(delta)
 
 func shooting_logic() -> void:
 	if Input.is_action_just_pressed("shoot"):

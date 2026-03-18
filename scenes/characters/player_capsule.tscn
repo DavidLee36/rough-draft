@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://wc0oipnp0r7o"]
 
 [ext_resource type="PackedScene" uid="uid://fcwhl803vx2i" path="res://scenes/characters/character_capsule.tscn" id="1_ttj48"]
-[ext_resource type="Script" uid="uid://bshluta2gdne5" path="res://scripts/characters/player_capsule.gd" id="2_ee66v"]
+[ext_resource type="Script" uid="uid://dohyjkwneh0bs" path="res://scripts/characters/player/player_capsule.gd" id="2_dd51n"]
 [ext_resource type="Script" uid="uid://dsuu1f74rodrg" path="res://scripts/characters/player/camera.gd" id="3_dd51n"]
 [ext_resource type="PackedScene" uid="uid://dpcq8sxm34dcu" path="res://scenes/equipment/pistol.tscn" id="4_cao08"]
 
 [node name="PlayerCapsule" unique_id=481567829 instance=ExtResource("1_ttj48")]
-script = ExtResource("2_ee66v")
+script = ExtResource("2_dd51n")
 
 [node name="Capsule" parent="." index="0" unique_id=1742361748]
 cast_shadow = 3
@@ -270,3 +270,8 @@ cast_shadow = 3
 [node name="Mouth_Smile_02" parent="Customization/Mouths" parent_id_path=PackedInt32Array(1843518369) index="8" unique_id=181586250]
 layers = 16
 cast_shadow = 3
+
+[node name="RestrictJetpackTimer" type="Timer" parent="." index="4" unique_id=1988262375]
+process_callback = 0
+wait_time = 0.25
+one_shot = true
