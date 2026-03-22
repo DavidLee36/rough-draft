@@ -42,7 +42,7 @@ func movement_logic(delta: float) -> void:
 	direction_movement_logic(delta, direction)
 	
 	jump_jetpack_logic(delta)
-	_push_away_rigid_bodies()
+	_rigid_body_collision()
 	move_and_slide()
 
 # Handle camera mouse look

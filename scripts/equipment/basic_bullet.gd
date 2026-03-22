@@ -11,7 +11,7 @@ extends Node3D
 
 var shooter : Node3D
 var steps = 3
-var _hit := false
+var _hit: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,9 +35,18 @@ func check_collision(delta: float) -> Object:
 	return null
 
 func collision_logic(obj: Object) -> void:
+	print(obj)
 	if(obj.is_in_group("characters")):
 		obj.hit(1.0)
+	if(obj is RigidBody3D):
+		rigid_body_collision(obj)
 	bullet_cleanup()
+
+func rigid_body_collision(obj: RigidBody3D) -> void:
+	var FORCE_MULTIPLIER = 100
+	var push_dir = -transform.basis.z
+	var collision_point = shape_cast.get_collision_point(0)
+	obj.apply_impulse(push_dir * (FORCE_MULTIPLIER/obj.mass), collision_point - obj.global_position)
 
 func bullet_cleanup() -> void:
 	mesh.visible = false
