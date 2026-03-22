@@ -42,6 +42,7 @@ func movement_logic(delta: float) -> void:
 	direction_movement_logic(delta, direction)
 	
 	jump_jetpack_logic(delta)
+	_push_away_rigid_bodies()
 	move_and_slide()
 
 # Handle camera mouse look
@@ -54,7 +55,6 @@ func panning_logic() -> void:
 
 # Handle vertical movement logic (jumping, falling, jetpack)
 func jump_jetpack_logic(delta) -> void:
-	print(velocity.y)
 	if is_on_floor() and Input.is_action_just_pressed("jump"): # user jumped
 		velocity.y = jump_velocity
 		restrict_jetpack_timer.start()
