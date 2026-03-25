@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://cvlc2wqwfakco"]
+
+[ext_resource type="PackedScene" uid="uid://dxw7cledbpiia" path="res://addons/proto-csgs/proto_csg_box_3d.tscn" id="1_a03r8"]
+[ext_resource type="Texture2D" uid="uid://cej3yoosomfd2" path="res://addons/proto-csgs/textures/dark/texture_13.png" id="3_a3u6q"]
+[ext_resource type="PackedScene" uid="uid://wc0oipnp0r7o" path="res://scenes/characters/player_capsule.tscn" id="3_b5uvf"]
+[ext_resource type="Texture2D" uid="uid://cxlqbjshgfnma" path="res://addons/proto-csgs/textures/light/texture_08.png" id="4_xgal5"]
+[ext_resource type="PackedScene" uid="uid://dilcl7aco8lba" path="res://addons/proto-csgs/proto_csg_cylinder_3d.tscn" id="6_aoomv"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tbb07"]
+sky_top_color = Color(0.12, 0.28, 0.72, 1)
+sky_horizon_color = Color(0.62, 0.78, 0.98, 1)
+sky_curve = 0.09
+ground_bottom_color = Color(0.22, 0.45, 0.82, 1)
+ground_horizon_color = Color(0.62, 0.78, 0.98, 1)
+ground_curve = 0.05
+
+[sub_resource type="Sky" id="Sky_36ke7"]
+sky_material = SubResource("ProceduralSkyMaterial_tbb07")
+
+[sub_resource type="Environment" id="Environment_v0svb"]
+background_mode = 2
+sky = SubResource("Sky_36ke7")
+ambient_light_source = 3
+ambient_light_energy = 1.2
+tonemap_mode = 2
+tonemap_exposure = 1.1
+sdfgi_enabled = true
+glow_enabled = true
+glow_intensity = 0.6
+glow_bloom = 0.08
+fog_light_color = Color(0.717053, 0.74403524, 0.7860099, 1)
+fog_density = 0.007
+fog_aerial_perspective = 0.25
+fog_sky_affect = 0.5
+volumetric_fog_density = 0.0056
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kckfb"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("3_a3u6q")
+metallic = 0.5
+roughness = 0.5
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aoomv"]
+resource_local_to_scene = true
+albedo_color = Color(2.2862106e-07, 0.47285253, 6.738305e-07, 1)
+albedo_texture = ExtResource("4_xgal5")
+metallic = 0.5
+roughness = 0.5
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_squpe"]
+resource_local_to_scene = true
+albedo_color = Color(2.2862106e-07, 0.47285253, 6.738305e-07, 1)
+albedo_texture = ExtResource("4_xgal5")
+metallic = 0.5
+roughness = 0.5
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a3u6q"]
+resource_local_to_scene = true
+albedo_color = Color(2.2862106e-07, 0.47285253, 6.738305e-07, 1)
+albedo_texture = ExtResource("4_xgal5")
+metallic = 0.5
+roughness = 0.5
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0vdiw"]
+resource_local_to_scene = true
+albedo_color = Color(0, 0.45146787, 0.45166904, 1)
+albedo_texture = ExtResource("4_xgal5")
+metallic = 0.5
+roughness = 0.5
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[node name="EnemyNavigation" type="Node3D" unique_id=1872524138]
+
+[node name="Environment" type="Node3D" parent="." unique_id=878058607]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=1195755668]
+environment = SubResource("Environment_v0svb")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=1485126389]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 9.772501, 0)
+layers = 3
+light_color = Color(0.9999986, 0.99584526, 0.71769387, 1)
+light_energy = 1.4
+shadow_enabled = true
+shadow_blur = 2.5
+
+[node name="PlayerCapsule" parent="." unique_id=481567829 instance=ExtResource("3_b5uvf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.88262904, -31.575571)
+
+[node name="ProtoCSGBox3D" parent="." unique_id=1631625641 instance=ExtResource("1_a03r8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+collision_layer = 3
+size = Vector3(18, 1, 80)
+material = SubResource("StandardMaterial3D_kckfb")
+
+[node name="ProtoCSGBox3D4" parent="." unique_id=753592979 instance=ExtResource("1_a03r8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0.814, -15.5)
+size = Vector3(3, 2, 2)
+material = SubResource("StandardMaterial3D_aoomv")
+block_color = 2
+block_style = 7
+
+[node name="ProtoCSGBox3D3" parent="." unique_id=1077585455 instance=ExtResource("1_a03r8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 3, -17.5)
+size = Vector3(3, 2, 2)
+material = SubResource("StandardMaterial3D_squpe")
+block_color = 2
+block_style = 7
+
+[node name="ProtoCSGBox3D2" parent="." unique_id=1257554272 instance=ExtResource("1_a03r8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, -24.5)
+size = Vector3(6, 2, 4)
+material = SubResource("StandardMaterial3D_a3u6q")
+block_color = 2
+block_style = 7
+
+[node name="ProtoCSGCylinder3D" parent="." unique_id=755145281 instance=ExtResource("6_aoomv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1, -25)
+material = SubResource("StandardMaterial3D_0vdiw")
+block_color = 2
+block_style = 7

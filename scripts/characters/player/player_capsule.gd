@@ -9,7 +9,8 @@ extends CharacterCapsule
 
 var _mouse_delta := Vector2.ZERO
 
-var aiming := false
+var aiming: bool = false
+var can_jetpack: bool = false
 
 func _ready() -> void:
 	super()
@@ -23,6 +24,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if event.is_action_pressed("mouse_capture"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	if event.is_action_pressed("toggle_jetpack"):
+		can_jetpack = !can_jetpack
 
 
 func _physics_process(delta: float) -> void:
@@ -58,7 +61,7 @@ func jump_jetpack_logic(delta) -> void:
 	if is_on_floor() and Input.is_action_just_pressed("jump"): # user jumped
 		velocity.y = jump_velocity
 		restrict_jetpack_timer.start()
-	if Input.is_action_pressed("jump") and restrict_jetpack_timer.is_stopped(): # jetpack
+	if can_jetpack and Input.is_action_pressed("jump") and restrict_jetpack_timer.is_stopped(): # jetpack
 		velocity.y += jetpack_velocity * delta
 		velocity.y = clampf(velocity.y, -INF, jetpack_velocity_cap)
 		return

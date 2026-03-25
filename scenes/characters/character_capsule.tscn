@@ -45,6 +45,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_j7wem")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ysvgh"]
+height = 2.0012207
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m274t"]
 resource_name = "Color_Palette_01"
@@ -2686,7 +2687,7 @@ shadow_mesh = SubResource("ArrayMesh_735wn")
 mesh = SubResource("ArrayMesh_duot5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=822529381]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_ysvgh")
 
 [node name="Customization" type="Node3D" parent="." unique_id=2021600134]
